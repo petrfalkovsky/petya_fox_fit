@@ -6,7 +6,6 @@ import 'package:get/get.dart' hide Trans;
 import 'package:petya_fox_fit/core/global_instans.dart/app_globals.dart';
 import 'package:petya_fox_fit/ui/screens/hud/hud_exports.dart';
 import 'package:vfx_flutter_common/getx_helpers.dart';
-import 'package:petya_fox_fit/ui/screens/hud/widgets/call_animated/call_animated.dart';
 import 'package:petya_fox_fit/ui/shared/shared_exports.dart';
 
 class HudScreen extends StatexWidget<HudController> {
