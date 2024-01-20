@@ -12,6 +12,13 @@ class AppIcons {
   /// использовать свг иконки
   /// AppIcons.svgWidget(AppIcons.map, width: 26),
   /// новые
+  static const stat = '$_basePathIcons/stat.svg';
+  static const profile = '$_basePathIcons/profile.svg';
+  static const schedule = '$_basePathIcons/schedule.svg';
+  static const funnel = '$_basePathIcons/funnel.svg';
+  static const more = '$_basePathIcons/more.svg';
+
+  /// старые
   static const micOff = '$_basePathIcons/mic_off.svg';
   static const mic = '$_basePathIcons/mic.svg';
   static const star = '$_basePathIcons/star.svg';
@@ -67,8 +74,6 @@ class AppIcons {
   static const turnSignalRight = '$_basePathIcons/turn_signal_right.svg';
   static const infoBack = '$_basePathIcons/info_back.svg';
   static const infoForward = '$_basePathIcons/info_forward.svg';
-
-  /// старых нет, удалил вроде все
 
   /// использовать пнг изображения
   /// Image.asset(AppIcons.monoJogger),

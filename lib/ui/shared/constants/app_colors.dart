@@ -6,10 +6,13 @@ abstract class AppColors {
   const AppColors._();
 
   static _AccentColors accent = const _AccentColors(
-    0xFFFEFEFF,
+    0xFF74788E,
     <int, Color>{
+      /// новые цвета
       // кнопки, элементы таблоидов всяких
-      1: Color(0xFF482575),
+      1: Color(0xFFFE5900),
+
+      /// старые цвета
       // сердечки всякие
       2: Color(0xFFFF2E9F),
       // чашки всякие
@@ -65,8 +68,11 @@ abstract class AppColors {
   static _BackgroundColors background = const _BackgroundColors(
     0xFFFFFFFF,
     <int, Color>{
+      /// новые цвета
       // светло-фиолетовый
-      1: Color(0xFF482575),
+      1: Color(0xFFFAF9F8),
+
+      /// старые цвета
       // темно-фиолетовый
       2: Color(0xFF341161),
       // светло-фиолетовый для градиента кнопок

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+// import 'package:easy_localization/easy_localization.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart' hide Trans;
@@ -27,23 +28,28 @@ class GeneralScaffoldService extends GetxService with StreamSubscriberMixin {
 
   final bottomAppBarItems = <BottomAppBarItem>[
     const BottomAppBarItem(
-      text: 'allMyReservations',
-      iconAsset: AppIcons.crown,
+      text: 'statistic',
+      iconAsset: AppIcons.stat,
       router: AppRoutes.start,
     ),
     const BottomAppBarItem(
-      text: 'reservation',
-      iconAsset: AppIcons.avatar,
+      text: 'clients',
+      iconAsset: AppIcons.profile,
       router: AppRoutes.start,
     ),
     const BottomAppBarItem(
-      text: 'settings',
-      iconAsset: AppIcons.callAnswer,
+      text: 'schedule',
+      iconAsset: AppIcons.schedule,
       router: AppRoutes.start,
     ),
     const BottomAppBarItem(
-      text: 'shop',
-      iconAsset: AppIcons.cart,
+      text: 'funnel',
+      iconAsset: AppIcons.funnel,
+      router: AppRoutes.start,
+    ),
+    const BottomAppBarItem(
+      text: 'more',
+      iconAsset: AppIcons.more,
       router: AppRoutes.start,
     )
   ];

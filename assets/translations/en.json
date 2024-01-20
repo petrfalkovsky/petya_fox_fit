@@ -1,6 +1,13 @@
 {
     "@@locale": "en",
 
+    "///   НИЖНЯЯ НАВИГАЦИЯ   ":  "",
+    "statistic": "Statistic",
+    "clients": "Clients",
+    "schedule": "Schedule",
+    "funnel": "Funnel",
+    "more": "More",
+
     "///   ВЕЛКАМ ЭКРАН   ":  "",
     "welcome_to": "Welcome to best play-to-earn project!",
     "transaction_history": "Transaction History",
