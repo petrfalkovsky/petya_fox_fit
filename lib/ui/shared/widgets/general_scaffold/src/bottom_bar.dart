@@ -4,6 +4,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart' hide Trans;
+import 'package:petya_fox_fit/ui/shared/all_shared.dart';
 import 'package:petya_fox_fit/ui/shared/constants/app_colors.dart';
 import 'package:petya_fox_fit/ui/shared/ext.dart';
 import 'package:petya_fox_fit/ui/shared/themes/app_colors_theme.dart';
@@ -98,14 +99,10 @@ class _BottomAppBarButton extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: isSelected ? selectedColor : unselectedColor,
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.w400,
-            fontSize: 10,
-            // letterSpacing: 0.2,
-            fontFamily: "OpenSans",
-          ),
+          style: isSelected
+              ? AppStyles.navbarText
+                  .andColor(selectedColor ?? Colors.transparent)
+              : AppStyles.navbarText.andColor(unselectedColor),
         ),
       ],
     );

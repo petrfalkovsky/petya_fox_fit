@@ -41,16 +41,20 @@ abstract class AppColors {
   }
 
   static _TextColors text = const _TextColors(
-    0xFF222222,
+    0xFF333E63,
     <int, Color>{
+      /// новые
       // primary
-      1: Color(0xFFFFFFFF),
-
-      2: Color(0xFF8436BA),
+      1: Color(0xFFFAFAFA),
       // неактивный текст
-      3: Color(0xFF7F669E),
-      // алерт в уведомлениях (таймер) - 1
-      4: Color(0xFF8436BA),
+      2: Color(0xFF3A4060),
+      // неактивный текст в набаре
+      3: Color(0xFF74788E),
+      // активный текст в набаре
+      4: Color(0xFFFE5900),
+
+      /// старые
+
       // алерт в уведомлениях (таймер) - 2
       5: Color(0xFFFFB32E),
       // алерт в уведомлениях (таймер) - 3
@@ -71,10 +75,10 @@ abstract class AppColors {
       /// новые цвета
       // светло-фиолетовый
       1: Color(0xFFFAF9F8),
+      // уведомления
+      2: Color(0xFFFF1F00),
 
       /// старые цвета
-      // темно-фиолетовый
-      2: Color(0xFF341161),
       // светло-фиолетовый для градиента кнопок
       3: Color(0xFF8336B8),
       // темно-фиолетовый для градиента кнопок

@@ -15,24 +15,62 @@ class HudScreen extends StatexWidget<HudController> {
 
   @override
   Widget buildWidget(BuildContext context) {
-    final textTheme = AppTextTheme.fromPlatform;
-
     return GeneralScaffold(
       backgroundColor: const AppColorsThemeLight().other.white,
       navBarEnable: true,
       appBar: AppBar(
+        backgroundColor: AppColors.background[1],
+        centerTitle: false,
+        actions: [
+          Stack(
+            children: [
+              AppIcons.svgWidget(AppIcons.notification, height: 21),
+              Transform.translate(
+                offset: const Offset(6, -6.5),
+                child: Stack(
+                  children: [
+                    Container(
+                      width: 18,
+                      height: 18,
+                      decoration: BoxDecoration(
+                        color: AppColors.background[2],
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 2,
+                        ),
+                      ),
+                      child: Center(
+                        child: Transform.translate(
+                          offset: const Offset(0, -1),
+                          child: Text("42",
+                              textAlign: TextAlign.center,
+                              style: AppStyles.text7
+                                  .andColor(
+                                      AppColors.text[1] ?? Colors.transparent)
+                                  .andWeight(FontWeight.w800)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          26.w,
+        ],
+        title: Text(
+          'statistic'.tr(),
+          style: AppStyles.largeTitle.andColor(AppColors.text),
+        ),
         elevation: 0,
-        toolbarHeight: 100,
+        toolbarHeight: 72,
         automaticallyImplyLeading: false,
-        flexibleSpace: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 24),
-              child: Text('allMyReservations'.tr(), style: textTheme.h1_1),
-            ),
-          ],
+        shape: const ContinuousRectangleBorder(
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(10),
+            bottomRight: Radius.circular(10),
+          ),
         ),
       ),
       child: Column(

@@ -35,7 +35,7 @@ class GeneralScaffoldService extends GetxService with StreamSubscriberMixin {
     const BottomAppBarItem(
       text: 'clients',
       iconAsset: AppIcons.profile,
-      router: AppRoutes.start,
+      router: AppRoutes.authWelcome,
     ),
     const BottomAppBarItem(
       text: 'schedule',

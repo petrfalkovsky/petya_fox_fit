@@ -4,10 +4,25 @@ import 'package:flutter/widgets.dart';
 class AppStyles {
   static const openSans = 'OpenSans';
 
+  /// новые
   static const largeTitle = TextStyle(
-    fontSize: 72,
+    fontSize: 18,
+    fontFamily: openSans,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const navbarText = TextStyle(
+    fontSize: 10,
+    fontFamily: openSans,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const text7 = TextStyle(
+    fontSize: 7,
     fontFamily: openSans,
   );
+
+  /// старые
 
   static const title = TextStyle(
     fontSize: 32,
