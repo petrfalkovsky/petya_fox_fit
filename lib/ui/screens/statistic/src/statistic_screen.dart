@@ -71,6 +71,11 @@ class HudScreen extends StatexWidget<HudController> {
                 positionLabelText2: '25 место',
                 requiredAmountLabelText2: 'Нужно 18 000 до 25 места',
               ),
+              18.h,
+              // таббар
+              PoiTypeSlider(
+                deliveryMethodChanged: (String) {},
+              ),
             ],
           ),
         ],
