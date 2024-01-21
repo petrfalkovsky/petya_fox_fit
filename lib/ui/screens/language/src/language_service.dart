@@ -8,6 +8,7 @@ import 'package:petya_fox_fit/data/repository/local/local_repository.dart';
 enum LanguageApp { en, ru }
 
 extension LanguageAppEx on LanguageApp {
+  // ignore: deprecated_member_use
   String get name => describeEnum(this);
 }
 

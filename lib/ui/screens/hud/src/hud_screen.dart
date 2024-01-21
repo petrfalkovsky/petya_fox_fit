@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:petya_fox_fit/ui/screens/hud/widgets/category_list.dart';
@@ -121,7 +123,7 @@ class HudScreen extends StatexWidget<HudController> {
                                 .andWeight(FontWeight.w500),
                           ),
                           Transform.translate(
-                            offset: Offset(0, -3),
+                            offset: const Offset(0, -3),
                             child: Row(
                               children: [
                                 Text(
@@ -178,7 +180,7 @@ class HudScreen extends StatexWidget<HudController> {
                                 .andWeight(FontWeight.w500),
                           ),
                           Transform.translate(
-                            offset: Offset(0, -3),
+                            offset: const Offset(0, -3),
                             child: Row(
                               children: [
                                 Text(

@@ -6,7 +6,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart' hide Trans;
 import 'package:petya_fox_fit/ui/shared/all_shared.dart';
 import 'package:petya_fox_fit/ui/shared/constants/app_colors.dart';
-import 'package:petya_fox_fit/ui/shared/ext.dart';
 import 'package:petya_fox_fit/ui/shared/themes/app_colors_theme.dart';
 import 'package:petya_fox_fit/ui/shared/widgets/general_scaffold/src/custom_bottom_appbar.dart';
 import 'package:petya_fox_fit/ui/shared/widgets/general_scaffold/src/general_scaffold_service.dart';
