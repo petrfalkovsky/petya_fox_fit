@@ -73,8 +73,11 @@ class HudScreen extends StatexWidget<HudController> {
               ),
               18.h,
               // таббар
-              PoiTypeSlider(
-                deliveryMethodChanged: (String) {},
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: PoiTypeSlider(
+                  deliveryMethodChanged: (String) {},
+                ),
               ),
             ],
           ),

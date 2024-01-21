@@ -34,25 +34,24 @@ class _PoiTypeSliderState extends State<PoiTypeSlider> {
 
     _selectedMethod ??= _sliderItems.keys.first;
 
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8),
-        child: CupertinoSlidingSegmentedControl<String>(
-          backgroundColor: AppColors.background[4] ?? Colors.transparent,
-          children: _sliderItems,
-          groupValue: _selectedMethod,
-          padding: const EdgeInsets.all(5),
-          onValueChanged: (String? deliveryMethodId) {
-            if (deliveryMethodId == null) {
-              return;
-            }
-            setState(() {
-              _selectedMethod = deliveryMethodId;
-            });
-            widget.deliveryMethodChanged(deliveryMethodId);
-          },
-        ),
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    return SizedBox(
+      width: screenWidth,
+      child: CupertinoSlidingSegmentedControl<String>(
+        backgroundColor: AppColors.background[4] ?? Colors.transparent,
+        children: _sliderItems,
+        groupValue: _selectedMethod,
+        padding: const EdgeInsets.all(5),
+        onValueChanged: (String? deliveryMethodId) {
+          if (deliveryMethodId == null) {
+            return;
+          }
+          setState(() {
+            _selectedMethod = deliveryMethodId;
+          });
+          widget.deliveryMethodChanged(deliveryMethodId);
+        },
       ),
     );
   }
