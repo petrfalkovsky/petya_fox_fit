@@ -87,23 +87,124 @@ class HudScreen extends StatexWidget<HudController> {
             outerPadding: 20,
             currentMonthId: '1',
           ),
-          const SizedBox.shrink(),
-          5.h,
-          Row(
-            children: [
-              Container(
-                height: 103,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 13, vertical: 16),
-                decoration: BoxDecoration(
-                  color: AppColors.background[3],
-                  borderRadius: BorderRadius.circular(12),
+          25.h,
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                        left: 13, right: 13, top: 15, bottom: 8),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          AppColors.background[5] ?? Colors.transparent,
+                          AppColors.background[6] ?? Colors.transparent,
+                        ],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AppIcons.svgWidget(AppIcons.wallet, width: 24),
+                          14.h,
+                          Text(
+                            "Продажи: 34 шт",
+                            textAlign: TextAlign.center,
+                            style: AppStyles.text13
+                                .andColor(
+                                    AppColors.text[1] ?? Colors.transparent)
+                                .andWeight(FontWeight.w500),
+                          ),
+                          Transform.translate(
+                            offset: Offset(0, -3),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "156 000",
+                                  textAlign: TextAlign.center,
+                                  style: AppStyles.text18
+                                      .andColor(AppColors.text[1] ??
+                                          Colors.transparent)
+                                      .andWeight(FontWeight.bold),
+                                ),
+                                Text(
+                                  " ₽",
+                                  textAlign: TextAlign.center,
+                                  style: AppStyles.text18
+                                      .andColor(AppColors.text[1] ??
+                                          Colors.transparent)
+                                      .andWeight(FontWeight.w800),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ]),
+                  ),
                 ),
-                // child: Column(children:
-
-                // ),
-              ),
-            ],
+                8.w,
+                Expanded(
+                  child: Container(
+                    padding: const EdgeInsets.only(
+                        left: 13, right: 13, top: 15, bottom: 8),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          AppColors.background[7] ?? Colors.transparent,
+                          AppColors.background[9] ?? Colors.transparent,
+                          AppColors.background[8] ?? Colors.transparent,
+                        ],
+                        stops: const [0.0, 0.45, 1.0],
+                        begin: Alignment.bottomLeft,
+                        end: Alignment.topRight,
+                      ),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AppIcons.svgWidget(AppIcons.receipt, width: 24),
+                          14.h,
+                          Text(
+                            "Реализация: 38 шт",
+                            textAlign: TextAlign.center,
+                            style: AppStyles.text13
+                                .andColor(
+                                    AppColors.text[1] ?? Colors.transparent)
+                                .andWeight(FontWeight.w500),
+                          ),
+                          Transform.translate(
+                            offset: Offset(0, -3),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "176 000",
+                                  textAlign: TextAlign.center,
+                                  style: AppStyles.text18
+                                      .andColor(AppColors.text[1] ??
+                                          Colors.transparent)
+                                      .andWeight(FontWeight.bold),
+                                ),
+                                Text(
+                                  " ₽",
+                                  textAlign: TextAlign.center,
+                                  style: AppStyles.text18
+                                      .andColor(AppColors.text[1] ??
+                                          Colors.transparent)
+                                      .andWeight(FontWeight.w800),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ]),
+                  ),
+                ),
+              ],
+            ),
           )
           // Expanded(
           //   child: Padding(

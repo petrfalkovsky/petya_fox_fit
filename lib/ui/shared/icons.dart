@@ -18,9 +18,11 @@ class AppIcons {
   static const funnel = '$_basePathIcons/funnel.svg';
   static const more = '$_basePathIcons/more.svg';
   static const notification = '$_basePathIcons/notification.svg';
+  static const wallet = '$_basePathIcons/wallet.svg';
+  static const receipt = '$_basePathIcons/receipt.svg';
 
   /// использовать пнг изображения
-  /// Image.asset(AppIcons.monoJogger),
+  /// Image.asset(AppIcons.wallet),
   // старые
   static const infoBackPNG = '$_basePathImg/info_back.png';
 

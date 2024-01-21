@@ -1,4 +1,4 @@
-// ignore_for_file: unused_field, no_leading_underscores_for_local_identifiers
+// ignore_for_file: unused_field, no_leading_underscores_for_local_identifiers, depend_on_referenced_packages
 
 import 'dart:collection';
 import 'dart:ui';
@@ -15,7 +15,7 @@ class MonthsLabels extends StatefulWidget {
 
   const MonthsLabels({
     required Key key,
-    this.outerPadding = 20,
+    this.outerPadding = 100,
     required this.onMonthSelected,
     required this.currentMonthId,
   }) : super(key: key);
@@ -44,7 +44,7 @@ class MonthsLabelsState extends State<MonthsLabels> {
         key: key,
         child: Container(
           height: 36,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
+          padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 0),
           decoration: BoxDecoration(
             color: _currentMonthId == monthId
                 ? AppColors.background[3]
@@ -92,7 +92,7 @@ class MonthsLabelsState extends State<MonthsLabels> {
           key: _keys[item.item1] ?? GlobalKey(),
         ));
         if (i < _monthList.length - 1) {
-          _listCategoryWidgets.add(const SizedBox(width: 10));
+          _listCategoryWidgets.add(const SizedBox(width: 3));
         }
       }
     }
@@ -143,7 +143,7 @@ class MonthsLabelsState extends State<MonthsLabels> {
 
     for (var t in _monthList) {
       var parentCategory = t.item1;
-      var children = ['Child1', 'Child2', 'Child3']; // Mocking child categories
+      var children = ['Child1', 'Child2', 'Child3'];
       for (var c in children) {
         _mapChildToParent[c] = parentCategory;
       }
@@ -152,11 +152,7 @@ class MonthsLabelsState extends State<MonthsLabels> {
   }
 
   void _makeLabelCentered(GlobalKey labelKey) {
-    // Implementation remains the same
-    // ...
-
-    // Mock implementation for demonstration
-    print('Label centered');
+    debugPrint('Label centered');
   }
 
   @override
@@ -167,7 +163,7 @@ class MonthsLabelsState extends State<MonthsLabels> {
 
   @override
   void dispose() {
-    _controller?.dispose();
+    _controller.dispose();
     super.dispose();
   }
 }

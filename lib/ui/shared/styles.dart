@@ -28,6 +28,16 @@ class AppStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static const text13 = TextStyle(
+    fontSize: 13,
+    fontFamily: openSans,
+  );
+
+  static const text18 = TextStyle(
+    fontSize: 18,
+    fontFamily: openSans,
+  );
+
   /// старые
 
   static const title = TextStyle(
