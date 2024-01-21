@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart' hide Trans;
-import 'package:petya_fox_fit/ui/screens/hud/hud_exports.dart';
+import 'package:petya_fox_fit/ui/screens/statistic/statistic_exports.dart';
 import 'package:petya_fox_fit/ui/screens/splash/splash.dart';
 import 'package:petya_fox_fit/ui/screens/start/src/start_screen.dart';
 

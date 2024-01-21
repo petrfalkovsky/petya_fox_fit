@@ -38,6 +38,16 @@ class AppStyles {
     fontFamily: openSans,
   );
 
+  static const text16 = TextStyle(
+    fontSize: 16,
+    fontFamily: openSans,
+  );
+
+  static const text12 = TextStyle(
+    fontSize: 12,
+    fontFamily: openSans,
+  );
+
   /// старые
 
   static const title = TextStyle(
@@ -113,4 +123,6 @@ extension TextStyleX on TextStyle {
   TextStyle andWeight(FontWeight weight) => copyWith(fontWeight: weight);
   TextStyle andColor(Color color) => copyWith(color: color);
   TextStyle andHeight(double height) => copyWith(height: height);
+  TextStyle andOpacity(double opacity) =>
+      copyWith(color: color?.withOpacity(opacity));
 }
