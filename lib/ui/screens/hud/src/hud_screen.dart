@@ -1,9 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:petya_fox_fit/ui/screens/hud/widgets/category_list.dart';
 import 'package:petya_fox_fit/ui/shared/themes/app_colors_theme.dart';
-import 'package:petya_fox_fit/ui/shared/themes/app_text_theme.dart';
 import 'package:get/get.dart' hide Trans;
-import 'package:petya_fox_fit/core/global_instans.dart/app_globals.dart';
 import 'package:petya_fox_fit/ui/screens/hud/hud_exports.dart';
 import 'package:vfx_flutter_common/getx_helpers.dart';
 import 'package:petya_fox_fit/ui/shared/shared_exports.dart';
@@ -15,11 +14,13 @@ class HudScreen extends StatexWidget<HudController> {
 
   @override
   Widget buildWidget(BuildContext context) {
+    final GlobalKey<MonthsLabelsState> categoryLabelsKey = GlobalKey();
+
     return GeneralScaffold(
       backgroundColor: const AppColorsThemeLight().other.white,
       navBarEnable: true,
       appBar: AppBar(
-        backgroundColor: AppColors.background[1],
+        backgroundColor: AppColors.background[4],
         centerTitle: false,
         actions: [
           Stack(
@@ -43,12 +44,14 @@ class HudScreen extends StatexWidget<HudController> {
                       child: Center(
                         child: Transform.translate(
                           offset: const Offset(0, -1),
-                          child: Text("42",
-                              textAlign: TextAlign.center,
-                              style: AppStyles.text7
-                                  .andColor(
-                                      AppColors.text[1] ?? Colors.transparent)
-                                  .andWeight(FontWeight.w800)),
+                          child: Text(
+                            "42",
+                            textAlign: TextAlign.center,
+                            style: AppStyles.text7
+                                .andColor(
+                                    AppColors.text[1] ?? Colors.transparent)
+                                .andWeight(FontWeight.w800),
+                          ),
                         ),
                       ),
                     ),
@@ -75,17 +78,42 @@ class HudScreen extends StatexWidget<HudController> {
       ),
       child: Column(
         children: [
+          39.h,
+          MonthsLabels(
+            key: categoryLabelsKey,
+            onMonthSelected: (monthId) {
+              debugPrint('Выбранный месяц: $monthId');
+            },
+            outerPadding: 20,
+            currentMonthId: '1',
+          ),
           const SizedBox.shrink(),
           5.h,
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 24, right: 24, top: 10),
-              child: PageView(
-                physics: const BouncingScrollPhysics(),
-                children: [],
+          Row(
+            children: [
+              Container(
+                height: 103,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 13, vertical: 16),
+                decoration: BoxDecoration(
+                  color: AppColors.background[3],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                // child: Column(children:
+
+                // ),
               ),
-            ),
-          ),
+            ],
+          )
+          // Expanded(
+          //   child: Padding(
+          //     padding: const EdgeInsets.only(left: 24, right: 24, top: 10),
+          //     child: PageView(
+          //       physics: const BouncingScrollPhysics(),
+          //       children: [],
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );

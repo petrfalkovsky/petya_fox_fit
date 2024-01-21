@@ -22,6 +22,12 @@ class AppStyles {
     fontFamily: openSans,
   );
 
+  static const monthText = TextStyle(
+    fontSize: 14,
+    fontFamily: openSans,
+    fontWeight: FontWeight.w500,
+  );
+
   /// старые
 
   static const title = TextStyle(
