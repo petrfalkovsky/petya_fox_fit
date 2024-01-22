@@ -1,4 +1,4 @@
-// ignore_for_file: unused_import
+// ignore_for_file: unused_import, non_constant_identifier_names, avoid_types_as_parameter_names
 
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -8,8 +8,8 @@ import 'package:petya_fox_fit/ui/screens/statistic/statistic_exports.dart';
 import 'package:vfx_flutter_common/getx_helpers.dart';
 import 'package:petya_fox_fit/ui/shared/shared_exports.dart';
 
-class HudScreen extends StatexWidget<HudController> {
-  HudScreen({Key? key}) : super(() => HudController(), key: key) {
+class StatisticScreen extends StatexWidget<StatisticController> {
+  StatisticScreen({Key? key}) : super(() => StatisticController(), key: key) {
     debugPrint('welcome_screen'.tr());
   }
 

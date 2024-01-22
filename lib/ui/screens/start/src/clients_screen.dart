@@ -5,10 +5,10 @@ import 'package:vfx_flutter_common/getx_helpers.dart';
 import 'package:petya_fox_fit/ui/shared/all_shared.dart';
 import 'package:petya_fox_fit/ui/shared/themes/app_colors_theme.dart';
 
-import '../start.dart';
+import '../clients.dart';
 
-class Start extends StatexWidget<StartController> {
-  Start({Key? key}) : super(() => StartController(), key: key) {
+class Clients extends StatexWidget<ClientsController> {
+  Clients({Key? key}) : super(() => ClientsController(), key: key) {
     debugPrint('start_screen'.tr());
   }
 

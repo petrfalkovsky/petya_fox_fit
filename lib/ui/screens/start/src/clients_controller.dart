@@ -1,3 +1,3 @@
 import 'package:vfx_flutter_common/getx_helpers.dart';
 
-class StartController extends StatexController {}
+class ClientsController extends StatexController {}

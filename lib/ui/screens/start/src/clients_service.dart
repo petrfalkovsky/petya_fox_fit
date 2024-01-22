@@ -8,4 +8,4 @@ import 'package:get/get.dart' hide Trans;
 import 'package:get_it/get_it.dart';
 import 'package:petya_fox_fit/core/utils/stream_subscriber.dart';
 
-class StartService extends GetxService with StreamSubscriberMixin {}
+class ClientsService extends GetxService with StreamSubscriberMixin {}
