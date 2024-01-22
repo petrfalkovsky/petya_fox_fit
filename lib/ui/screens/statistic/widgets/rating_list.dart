@@ -22,100 +22,96 @@ class RatingList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Container(
-        padding:
-            const EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 16),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: AppColors.background,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey.withOpacity(0.04),
-              spreadRadius: 8,
-              blurRadius: 8,
-              offset: const Offset(0, 2),
-            ),
-          ],
-        ),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          salesLabelText ?? 'Ввести текст'.tr(),
-                          style: AppStyles.text16.andColor(AppColors.text),
-                        ),
-                        Text(
-                          positionLabelText ?? 'какое-то место'.tr(),
-                          style: AppStyles.largeTitle.andColor(AppColors.text),
-                        ),
-                      ],
-                    ),
-                    4.h,
-                    Text(
-                      requiredAmountLabelText ??
-                          'Что нужно сделать до места'.tr(),
-                      style: AppStyles.text12
-                          .andColor(AppColors.text)
-                          .andOpacity(0.7),
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: AppColors.text,
-                  size: 16,
-                )
-              ],
-            ),
-            4.h,
-            Divider(color: AppColors.accent[2]),
-            4.h,
-            Row(
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          salesLabelText2 ?? 'Ввести текст'.tr(),
-                          style: AppStyles.text16.andColor(AppColors.text),
-                        ),
-                        Text(
-                          positionLabelText2 ?? 'какое-то место'.tr(),
-                          style: AppStyles.largeTitle.andColor(AppColors.text),
-                        ),
-                      ],
-                    ),
-                    4.h,
-                    Text(
-                      requiredAmountLabelText2 ??
-                          'Нужно 14 000 ₽ до 25 места'.tr(),
-                      style: AppStyles.text12
-                          .andColor(AppColors.text)
-                          .andOpacity(0.7),
-                    ),
-                  ],
-                ),
-                const Spacer(),
-                Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: AppColors.text,
-                  size: 16,
-                ),
-              ],
-            ),
-          ],
-        ),
+    return Container(
+      padding: const EdgeInsets.only(left: 15, right: 15, top: 10, bottom: 16),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: AppColors.background,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.04),
+            spreadRadius: 8,
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        children: [
+          Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        salesLabelText ?? 'Ввести текст'.tr(),
+                        style: AppStyles.text16.andColor(AppColors.text),
+                      ),
+                      Text(
+                        positionLabelText ?? 'какое-то место'.tr(),
+                        style: AppStyles.largeTitle.andColor(AppColors.text),
+                      ),
+                    ],
+                  ),
+                  4.h,
+                  Text(
+                    requiredAmountLabelText ??
+                        'Что нужно сделать до места'.tr(),
+                    style: AppStyles.text12
+                        .andColor(AppColors.text)
+                        .andOpacity(0.7),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              Icon(
+                Icons.arrow_forward_ios_rounded,
+                color: AppColors.text,
+                size: 16,
+              )
+            ],
+          ),
+          4.h,
+          Divider(color: AppColors.accent[2]),
+          4.h,
+          Row(
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        salesLabelText2 ?? 'Ввести текст'.tr(),
+                        style: AppStyles.text16.andColor(AppColors.text),
+                      ),
+                      Text(
+                        positionLabelText2 ?? 'какое-то место'.tr(),
+                        style: AppStyles.largeTitle.andColor(AppColors.text),
+                      ),
+                    ],
+                  ),
+                  4.h,
+                  Text(
+                    requiredAmountLabelText2 ??
+                        'Нужно 14 000 ₽ до 25 места'.tr(),
+                    style: AppStyles.text12
+                        .andColor(AppColors.text)
+                        .andOpacity(0.7),
+                  ),
+                ],
+              ),
+              const Spacer(),
+              Icon(
+                Icons.arrow_forward_ios_rounded,
+                color: AppColors.text,
+                size: 16,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

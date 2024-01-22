@@ -48,6 +48,11 @@ class AppStyles {
     fontFamily: openSans,
   );
 
+  static const text14 = TextStyle(
+    fontSize: 14,
+    fontFamily: openSans,
+  );
+
   /// старые
 
   static const title = TextStyle(

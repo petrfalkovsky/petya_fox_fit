@@ -41,47 +41,52 @@ class HudScreen extends StatexWidget<HudController> {
           ),
         ),
       ),
-      child: Column(
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              39.h,
-              MonthsLabels(
-                key: categoryLabelsKey,
-                onMonthSelected: (monthId) {
-                  debugPrint('Выбранный месяц: $monthId');
-                },
-                outerPadding: 20,
-                currentMonthId: '1',
-              ),
-              25.h,
-              // два блока с данными о выручке
-              const SalesStats(),
-              40.h,
-              // заголовок рейтинга
-              const RatingHead(),
-              18.h,
-              // контент рейтинга
-              const RatingList(
-                salesLabelText: 'По продажам ',
-                positionLabelText: '26 место',
-                requiredAmountLabelText: 'Нужно 14 000 до 26 места',
-                salesLabelText2: 'По реализации ',
-                positionLabelText2: '25 место',
-                requiredAmountLabelText2: 'Нужно 18 000 до 25 места',
-              ),
-              18.h,
-              // таббар
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: PoiTypeSlider(
-                  deliveryMethodChanged: (String) {},
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Column(
+              children: [
+                39.h,
+                MonthsLabels(
+                  key: categoryLabelsKey,
+                  onMonthSelected: (monthId) {
+                    debugPrint('Выбранный месяц: $monthId');
+                  },
+                  outerPadding: 20,
+                  currentMonthId: '1',
                 ),
-              ),
-            ],
-          ),
-        ],
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      14.h,
+                      // два блока с данными о выручке
+                      const SalesStats(),
+                      30.h,
+                      // заголовок рейтинга
+                      const RatingHead(),
+                      18.h,
+                      // контент рейтинга
+                      const RatingList(
+                        salesLabelText: 'По продажам ',
+                        positionLabelText: '26 место',
+                        requiredAmountLabelText: 'Нужно 14 000 до 26 места',
+                        salesLabelText2: 'По реализации ',
+                        positionLabelText2: '25 место',
+                        requiredAmountLabelText2: 'Нужно 18 000 до 25 места',
+                      ),
+                      18.h,
+                    ],
+                  ),
+                ),
+                // таббар
+                PoiTypeSlider(deliveryMethodChanged: (String) {}),
+                18.h,
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -94,12 +99,9 @@ class RatingHead extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Text(
-        'Рейтинг'.tr(),
-        style: AppStyles.largeTitle.andColor(AppColors.text),
-      ),
+    return Text(
+      'Рейтинг'.tr(),
+      style: AppStyles.largeTitle.andColor(AppColors.text),
     );
   }
 }

@@ -16,41 +16,97 @@ class PoiTypeSlider extends StatefulWidget {
 }
 
 class _PoiTypeSliderState extends State<PoiTypeSlider> {
-  String? _selectedMethod;
-  final _sliderItems = <String, Widget>{};
+  String _selectedTabId = 'services';
+  final Map<String, Widget> _sliderItems = {};
 
   @override
   void initState() {
     super.initState();
+    _createSelectorItems();
   }
 
   @override
   Widget build(BuildContext context) {
-    _createSelectorItems();
-
-    if (_sliderItems.isEmpty) {
-      return const SizedBox();
-    }
-
-    _selectedMethod ??= _sliderItems.keys.first;
-
     double screenWidth = MediaQuery.of(context).size.width;
 
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: SizedBox(
+            width: screenWidth,
+            child: CupertinoSlidingSegmentedControl<String>(
+              padding: const EdgeInsets.all(5),
+              backgroundColor: AppColors.background[4] ?? Colors.transparent,
+              children: _sliderItems,
+              groupValue: _selectedTabId,
+              onValueChanged: (String? newValue) {
+                if (newValue == null) return;
+
+                setState(() {
+                  _selectedTabId = newValue;
+                });
+
+                widget.deliveryMethodChanged(newValue);
+              },
+            ),
+          ),
+        ),
+        11.h,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 13),
+          child: IndexedStack(
+            index: _sliderItems.keys.toList().indexOf(_selectedTabId),
+            children: [
+              _buildTabContent('services'),
+              const PlaceholderMaintaince(),
+              const PlaceholderMaintaince(),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildTabContent(String tabId) {
     return SizedBox(
-      width: screenWidth,
-      child: CupertinoSlidingSegmentedControl<String>(
-        backgroundColor: AppColors.background[4] ?? Colors.transparent,
-        children: _sliderItems,
-        groupValue: _selectedMethod,
-        padding: const EdgeInsets.all(5),
-        onValueChanged: (String? deliveryMethodId) {
-          if (deliveryMethodId == null) {
-            return;
-          }
-          setState(() {
-            _selectedMethod = deliveryMethodId;
-          });
-          widget.deliveryMethodChanged(deliveryMethodId);
+      height: 400,
+      child: ListView.builder(
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Container(
+              height: 58,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppColors.background,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(0.04),
+                    spreadRadius: 8,
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    '5 шт '.tr(),
+                    style: AppStyles.text14
+                        .andColor(AppColors.text)
+                        .andWeight(FontWeight.bold),
+                  ),
+                  Text(
+                    '1ПТ 45мин Мастер Аква'.tr(),
+                    style: AppStyles.text14.andColor(AppColors.text),
+                  ),
+                ],
+              ),
+            ),
+          );
         },
       ),
     );
@@ -59,7 +115,7 @@ class _PoiTypeSliderState extends State<PoiTypeSlider> {
   void _createSelectorItems() {
     final idList = ['services', 'write_off_history', 'sales_history'];
 
-    for (final id in idList) {
+    for (String id in idList) {
       String title = '';
       if (id == 'services') {
         title = 'services'.tr();
@@ -80,11 +136,37 @@ class _PoiTypeSliderState extends State<PoiTypeSlider> {
               child: Text(
                 title,
                 textAlign: TextAlign.center,
+                style: AppStyles.text13
+                    .andColor(AppColors.text[2] ?? Colors.transparent),
               ),
             ),
           ),
         ),
       );
     }
+  }
+}
+
+class PlaceholderMaintaince extends StatelessWidget {
+  const PlaceholderMaintaince({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 18.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Раздел в разработке',
+            style: AppStyles.text13
+                .andColor(AppColors.text[2] ?? Colors.transparent)
+                .andOpacity(0.7),
+          ),
+        ],
+      ),
+    );
   }
 }
