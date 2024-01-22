@@ -5,8 +5,6 @@ import 'package:petya_fox_fit/core/utils/stream_subscriber.dart';
 import 'package:petya_fox_fit/data/repository/local/local_repository.dart';
 import 'package:petya_fox_fit/data/storage/hive/src/auth_status_storage.dart';
 import 'package:petya_fox_fit/ui/router/routing.dart';
-// import 'package:petya_fox_fit/ui/shared/alert.dart';
-// import 'package:petya_fox_fit/ui/shared/constants/app_colors.dart';
 
 class SplashScreenService extends GetxService with StreamSubscriberMixin {
   SplashScreenService({

@@ -6,12 +6,16 @@ abstract class AppColors {
   const AppColors._();
 
   static _AccentColors accent = const _AccentColors(
-    0xFFFEFEFF,
+    0xFF74788E,
     <int, Color>{
+      /// новые цвета
       // кнопки, элементы таблоидов всяких
-      1: Color(0xFF482575),
-      // сердечки всякие
-      2: Color(0xFFFF2E9F),
+      1: Color(0xFFFE5900),
+      // цвет дидвайдера в списке
+      2: Color(0xFFEAEAEA),
+
+      /// старые цвета
+
       // чашки всякие
       3: Color(0xFFF6980B),
       // воздух например
@@ -38,18 +42,22 @@ abstract class AppColors {
   }
 
   static _TextColors text = const _TextColors(
-    0xFF222222,
+    0xFF333E63,
     <int, Color>{
+      /// новые
       // primary
-      1: Color(0xFFFFFFFF),
-
-      2: Color(0xFF8436BA),
+      1: Color(0xFFFAFAFA),
       // неактивный текст
-      3: Color(0xFF7F669E),
-      // алерт в уведомлениях (таймер) - 1
-      4: Color(0xFF8436BA),
-      // алерт в уведомлениях (таймер) - 2
-      5: Color(0xFFFFB32E),
+      2: Color(0xFF3A4060),
+      // неактивный текст в набаре
+      3: Color(0xFF74788E),
+      // активный текст в набаре
+      4: Color(0xFFFE5900),
+      // неактивный месяц
+      5: Color(0xFF2793DA),
+
+      /// старые
+
       // алерт в уведомлениях (таймер) - 3
       6: Color(0xFFED4520),
     },
@@ -65,24 +73,28 @@ abstract class AppColors {
   static _BackgroundColors background = const _BackgroundColors(
     0xFFFFFFFF,
     <int, Color>{
+      /// новые цвета
       // светло-фиолетовый
-      1: Color(0xFF482575),
-      // темно-фиолетовый
-      2: Color(0xFF341161),
-      // светло-фиолетовый для градиента кнопок
-      3: Color(0xFF8336B8),
-      // темно-фиолетовый для градиента кнопок
-      4: Color(0xFF492675),
-      // темный-фиолетовый градиент
-      5: Color(0xFF321857),
-      // темный-фиолетовый градиент
-      6: Color(0xFF07090C),
-      // фон плашки в уведомлении
-      7: Color(0xFFFFB629),
-      // фон для окна чата
-      8: Color(0xFF000000),
-      // фон звонка
-      9: Color(0xFFFE4639),
+      1: Color(0xFFFAF9F8),
+      // уведомления
+      2: Color(0xFFFF1F00),
+      // активный месяц
+      3: Color(0xFF2793DA),
+      // неактивный месяц
+      4: Color(0xFFFAFAFA),
+      // темный-синий градиент
+      5: Color(0xFF3C4262),
+      // светло-фиолетовый градиент
+      6: Color(0xFF4D547B),
+      // темный-оранжевый градиент
+      7: Color(0xFFDF5304),
+      // светло-оранжевый градиент
+      8: Color(0xFFFBAB02),
+      // темный-оранжевый градиент, средняя остановка
+      9: Color(0xFFF15E02),
+
+      /// старые цвета
+
       // фон звонка
       10: Color(0xFF65C466),
       // фон кнопки оружия

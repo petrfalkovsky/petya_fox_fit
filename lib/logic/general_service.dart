@@ -5,7 +5,7 @@ import 'package:petya_fox_fit/ui/screens/language/language.dart';
 import 'package:petya_fox_fit/ui/screens/splash/splash.dart';
 import 'package:petya_fox_fit/ui/shared/widgets/general_scaffold/src/general_scaffold_service.dart';
 
-import '../ui/screens/start/start.dart';
+import '../ui/screens/statistic/statistic_exports.dart';
 
 class GeneralService extends GetxService {
   @override
@@ -22,6 +22,7 @@ class GeneralService extends GetxService {
       ..lazyPut(() => Dio())
       ..lazyPut(() => SplashScreenService())
       ..lazyPut(() => GeneralScaffoldService())
-      ..lazyPut(() => StartController());
+      ..lazyPut(() => GeneralScaffoldService())
+      ..lazyPut(() => StatisticController());
   }
 }

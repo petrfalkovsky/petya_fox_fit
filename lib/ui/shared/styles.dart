@@ -4,10 +4,56 @@ import 'package:flutter/widgets.dart';
 class AppStyles {
   static const openSans = 'OpenSans';
 
+  /// новые
   static const largeTitle = TextStyle(
-    fontSize: 72,
+    fontSize: 18,
+    fontFamily: openSans,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const navbarText = TextStyle(
+    fontSize: 10,
+    fontFamily: openSans,
+    fontWeight: FontWeight.w400,
+  );
+
+  static const text7 = TextStyle(
+    fontSize: 7,
     fontFamily: openSans,
   );
+
+  static const monthText = TextStyle(
+    fontSize: 14,
+    fontFamily: openSans,
+    fontWeight: FontWeight.w500,
+  );
+
+  static const text13 = TextStyle(
+    fontSize: 13,
+    fontFamily: openSans,
+  );
+
+  static const text18 = TextStyle(
+    fontSize: 18,
+    fontFamily: openSans,
+  );
+
+  static const text16 = TextStyle(
+    fontSize: 16,
+    fontFamily: openSans,
+  );
+
+  static const text12 = TextStyle(
+    fontSize: 12,
+    fontFamily: openSans,
+  );
+
+  static const text14 = TextStyle(
+    fontSize: 14,
+    fontFamily: openSans,
+  );
+
+  /// старые
 
   static const title = TextStyle(
     fontSize: 32,
@@ -82,4 +128,6 @@ extension TextStyleX on TextStyle {
   TextStyle andWeight(FontWeight weight) => copyWith(fontWeight: weight);
   TextStyle andColor(Color color) => copyWith(color: color);
   TextStyle andHeight(double height) => copyWith(height: height);
+  TextStyle andOpacity(double opacity) =>
+      copyWith(color: color?.withOpacity(opacity));
 }

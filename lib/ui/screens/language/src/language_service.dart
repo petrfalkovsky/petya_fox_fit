@@ -8,6 +8,7 @@ import 'package:petya_fox_fit/data/repository/local/local_repository.dart';
 enum LanguageApp { en, ru }
 
 extension LanguageAppEx on LanguageApp {
+  // ignore: deprecated_member_use
   String get name => describeEnum(this);
 }
 
@@ -22,7 +23,7 @@ class LanguageScreenService extends GetxService {
   final LocalRepository repoLocal;
 
   /// язык по умолчанию
-  final _language = LanguageApp.en.obs;
+  final _language = LanguageApp.ru.obs;
   LanguageApp get language$ => _language();
 
   final mapLang = {
